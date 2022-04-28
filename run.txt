@@ -1,0 +1,6 @@
+docker build -t htmltopdf -f Dockerfile .
+docker run --name htmlToPDF --rm -d \
+--mount type=bind,src=/home/<user>/Documents/SAE1.03/mdToPDF/source,dst=/source \
+--mount type=bind,src=/home/<user>/Documents/SAE1.03/mdToPDF/destination,dst=/destination \
+--mount type=bind,src=/home/<user>/Documents/SAE1.03/mdToPDF/facturation,dst=/facturation \
+htmltopdf
